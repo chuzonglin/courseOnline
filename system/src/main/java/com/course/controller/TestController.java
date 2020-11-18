@@ -1,6 +1,6 @@
 package com.course.controller;
 
-import com.course.server.domin.Test;
+import com.course.server.domain.Test;
 import com.course.server.mapper.TestMapper;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +16,6 @@ public class TestController {
 
     @RequestMapping("/test")
     public List<Test> test(){
-        return testMapper.list();
+        return (List<Test>) testMapper.selectByPrimaryKey("1");
     }
 }
