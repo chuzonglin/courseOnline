@@ -1,6 +1,7 @@
 package com.course.server.service;
 
 import com.course.server.domain.Test;
+import com.course.server.domain.TestExample;
 import com.course.server.mapper.TestMapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,10 @@ public class TestService {
     private TestMapper testmapper;
 
     public List<Test> list(){
-        return (List<Test>) testmapper.selectByPrimaryKey( "1");
+        TestExample testExample = new TestExample();
+        testExample.createCriteria().andIdEqualTo("1");
+        testExample.setOrderByClause("id asc");
+
+        return (List<Test>) testmapper.selectByExample(testExample);
     }
 }

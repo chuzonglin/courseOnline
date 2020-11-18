@@ -16,6 +16,6 @@ public class TestController {
 
     @RequestMapping("/test")
     public List<Test> test(){
-        return (List<Test>) testMapper.selectByPrimaryKey("1");
+        return (List<Test>) testMapper.selectByExample(null);
     }
 }
