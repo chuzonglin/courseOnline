@@ -1,4 +1,4 @@
-package com.course.domin;
+package com.course.server.domin;
 
 public class Test {
     private String id;

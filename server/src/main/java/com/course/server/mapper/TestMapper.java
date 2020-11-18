@@ -1,6 +1,7 @@
-package com.course.mapper;
+package com.course.server.mapper;
 
-import com.course.domin.Test;
+
+import com.course.server.domin.Test;
 
 import java.util.List;
 
