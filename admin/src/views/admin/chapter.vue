@@ -1,13 +1,14 @@
 <template>
-  <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+  <table id="simple-table" class="table  table-bordered table-hover">
     <thead>
     <tr>
       <th class="center">
-        <label class="position-relative">
-          <input type="checkbox" class="ace"/>
+        <label class="pos-rel">
+          <input type="checkbox" class="ace" />
           <span class="lbl"></span>
         </label>
       </th>
+      <th class="detail-col">Details</th>
       <th>Domain</th>
       <th>Price</th>
       <th class="hidden-480">Clicks</th>
@@ -25,10 +26,19 @@
     <tbody>
     <tr>
       <td class="center">
-        <label class="position-relative">
-          <input type="checkbox" class="ace"/>
+        <label class="pos-rel">
+          <input type="checkbox" class="ace" />
           <span class="lbl"></span>
         </label>
+      </td>
+
+      <td class="center">
+        <div class="action-buttons">
+          <a href="#" class="green bigger-140 show-details-btn" title="Show Details">
+            <i class="ace-icon fa fa-angle-double-down"></i>
+            <span class="sr-only">Details</span>
+          </a>
+        </div>
       </td>
 
       <td>
@@ -62,34 +72,33 @@
         </div>
 
         <div class="hidden-md hidden-lg">
-          <div class="inline position-relative">
+          <div class="inline pos-rel">
             <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
               <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
             </button>
 
-            <ul
-              class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
               <li>
                 <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																		<span class="blue">
-																			<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																		</span>
+                                  <span class="blue">
+                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                  </span>
                 </a>
               </li>
 
               <li>
                 <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																		<span class="green">
-																			<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																		</span>
+                                  <span class="green">
+                                    <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                  </span>
                 </a>
               </li>
 
               <li>
                 <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																		<span class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																		</span>
+                                  <span class="red">
+                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                  </span>
                 </a>
               </li>
             </ul>
@@ -98,12 +107,127 @@
       </td>
     </tr>
 
+    <tr class="detail-row">
+      <td colspan="8">
+        <div class="table-detail">
+          <div class="row">
+            <div class="col-xs-12 col-sm-2">
+              <div class="text-center">
+                <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
+                <br />
+                <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+                  <div class="inline position-relative">
+                    <a class="user-title-label" href="#">
+                      <i class="ace-icon fa fa-circle light-green"></i>
+                      &nbsp;
+                      <span class="white">Alex M. Doe</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7">
+              <div class="space visible-xs"></div>
+
+              <div class="profile-user-info profile-user-info-striped">
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Username </div>
+
+                  <div class="profile-info-value">
+                    <span>alexdoe</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Location </div>
+
+                  <div class="profile-info-value">
+                    <i class="fa fa-map-marker light-orange bigger-110"></i>
+                    <span>Netherlands, Amsterdam</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Age </div>
+
+                  <div class="profile-info-value">
+                    <span>38</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Joined </div>
+
+                  <div class="profile-info-value">
+                    <span>2010/06/20</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Last Online </div>
+
+                  <div class="profile-info-value">
+                    <span>3 hours ago</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> About Me </div>
+
+                  <div class="profile-info-value">
+                    <span>Bio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3">
+              <div class="space visible-xs"></div>
+              <h4 class="header blue lighter less-margin">Send a message to Alex</h4>
+
+              <div class="space-6"></div>
+
+              <form>
+                <fieldset>
+                  <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
+                </fieldset>
+
+                <div class="hr hr-dotted"></div>
+
+                <div class="clearfix">
+                  <label class="pull-left">
+                    <input type="checkbox" class="ace" />
+                    <span class="lbl"> Email me a copy</span>
+                  </label>
+
+                  <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
+                    Submit
+                    <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+
     <tr>
       <td class="center">
-        <label class="position-relative">
-          <input type="checkbox" class="ace"/>
+        <label class="pos-rel">
+          <input type="checkbox" class="ace" />
           <span class="lbl"></span>
         </label>
+      </td>
+
+      <td class="center">
+        <div class="action-buttons">
+          <a href="#" class="green bigger-140 show-details-btn" title="Show Details">
+            <i class="ace-icon fa fa-angle-double-down"></i>
+            <span class="sr-only">Details</span>
+          </a>
+        </div>
       </td>
 
       <td>
@@ -137,34 +261,33 @@
         </div>
 
         <div class="hidden-md hidden-lg">
-          <div class="inline position-relative">
+          <div class="inline pos-rel">
             <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
               <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
             </button>
 
-            <ul
-              class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
               <li>
                 <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																		<span class="blue">
-																			<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																		</span>
+                                  <span class="blue">
+                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                  </span>
                 </a>
               </li>
 
               <li>
                 <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																		<span class="green">
-																			<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																		</span>
+                                  <span class="green">
+                                    <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                  </span>
                 </a>
               </li>
 
               <li>
                 <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																		<span class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																		</span>
+                                  <span class="red">
+                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                  </span>
                 </a>
               </li>
             </ul>
@@ -173,12 +296,127 @@
       </td>
     </tr>
 
+    <tr class="detail-row">
+      <td colspan="8">
+        <div class="table-detail">
+          <div class="row">
+            <div class="col-xs-12 col-sm-2">
+              <div class="text-center">
+                <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
+                <br />
+                <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+                  <div class="inline position-relative">
+                    <a class="user-title-label" href="#">
+                      <i class="ace-icon fa fa-circle light-green"></i>
+                      &nbsp;
+                      <span class="white">Alex M. Doe</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7">
+              <div class="space visible-xs"></div>
+
+              <div class="profile-user-info profile-user-info-striped">
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Username </div>
+
+                  <div class="profile-info-value">
+                    <span>alexdoe</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Location </div>
+
+                  <div class="profile-info-value">
+                    <i class="fa fa-map-marker light-orange bigger-110"></i>
+                    <span>Netherlands, Amsterdam</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Age </div>
+
+                  <div class="profile-info-value">
+                    <span>38</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Joined </div>
+
+                  <div class="profile-info-value">
+                    <span>2010/06/20</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Last Online </div>
+
+                  <div class="profile-info-value">
+                    <span>3 hours ago</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> About Me </div>
+
+                  <div class="profile-info-value">
+                    <span>Bio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3">
+              <div class="space visible-xs"></div>
+              <h4 class="header blue lighter less-margin">Send a message to Alex</h4>
+
+              <div class="space-6"></div>
+
+              <form>
+                <fieldset>
+                  <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
+                </fieldset>
+
+                <div class="hr hr-dotted"></div>
+
+                <div class="clearfix">
+                  <label class="pull-left">
+                    <input type="checkbox" class="ace" />
+                    <span class="lbl"> Email me a copy</span>
+                  </label>
+
+                  <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
+                    Submit
+                    <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+
     <tr>
       <td class="center">
-        <label class="position-relative">
-          <input type="checkbox" class="ace"/>
+        <label class="pos-rel">
+          <input type="checkbox" class="ace" />
           <span class="lbl"></span>
         </label>
+      </td>
+
+      <td class="center">
+        <div class="action-buttons">
+          <a href="#" class="green bigger-140 show-details-btn" title="Show Details">
+            <i class="ace-icon fa fa-angle-double-down"></i>
+            <span class="sr-only">Details</span>
+          </a>
+        </div>
       </td>
 
       <td>
@@ -212,34 +450,33 @@
         </div>
 
         <div class="hidden-md hidden-lg">
-          <div class="inline position-relative">
+          <div class="inline pos-rel">
             <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
               <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
             </button>
 
-            <ul
-              class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
               <li>
                 <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																		<span class="blue">
-																			<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																		</span>
+                                  <span class="blue">
+                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                  </span>
                 </a>
               </li>
 
               <li>
                 <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																		<span class="green">
-																			<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																		</span>
+                                  <span class="green">
+                                    <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                  </span>
                 </a>
               </li>
 
               <li>
                 <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																		<span class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																		</span>
+                                  <span class="red">
+                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                  </span>
                 </a>
               </li>
             </ul>
@@ -248,12 +485,127 @@
       </td>
     </tr>
 
+    <tr class="detail-row">
+      <td colspan="8">
+        <div class="table-detail">
+          <div class="row">
+            <div class="col-xs-12 col-sm-2">
+              <div class="text-center">
+                <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
+                <br />
+                <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+                  <div class="inline position-relative">
+                    <a class="user-title-label" href="#">
+                      <i class="ace-icon fa fa-circle light-green"></i>
+                      &nbsp;
+                      <span class="white">Alex M. Doe</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7">
+              <div class="space visible-xs"></div>
+
+              <div class="profile-user-info profile-user-info-striped">
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Username </div>
+
+                  <div class="profile-info-value">
+                    <span>alexdoe</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Location </div>
+
+                  <div class="profile-info-value">
+                    <i class="fa fa-map-marker light-orange bigger-110"></i>
+                    <span>Netherlands, Amsterdam</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Age </div>
+
+                  <div class="profile-info-value">
+                    <span>38</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Joined </div>
+
+                  <div class="profile-info-value">
+                    <span>2010/06/20</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Last Online </div>
+
+                  <div class="profile-info-value">
+                    <span>3 hours ago</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> About Me </div>
+
+                  <div class="profile-info-value">
+                    <span>Bio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3">
+              <div class="space visible-xs"></div>
+              <h4 class="header blue lighter less-margin">Send a message to Alex</h4>
+
+              <div class="space-6"></div>
+
+              <form>
+                <fieldset>
+                  <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
+                </fieldset>
+
+                <div class="hr hr-dotted"></div>
+
+                <div class="clearfix">
+                  <label class="pull-left">
+                    <input type="checkbox" class="ace" />
+                    <span class="lbl"> Email me a copy</span>
+                  </label>
+
+                  <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
+                    Submit
+                    <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+
     <tr>
       <td class="center">
-        <label class="position-relative">
-          <input type="checkbox" class="ace"/>
+        <label class="pos-rel">
+          <input type="checkbox" class="ace" />
           <span class="lbl"></span>
         </label>
+      </td>
+
+      <td class="center">
+        <div class="action-buttons">
+          <a href="#" class="green bigger-140 show-details-btn" title="Show Details">
+            <i class="ace-icon fa fa-angle-double-down"></i>
+            <span class="sr-only">Details</span>
+          </a>
+        </div>
       </td>
 
       <td>
@@ -287,34 +639,33 @@
         </div>
 
         <div class="hidden-md hidden-lg">
-          <div class="inline position-relative">
+          <div class="inline pos-rel">
             <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
               <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
             </button>
 
-            <ul
-              class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
               <li>
                 <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																		<span class="blue">
-																			<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																		</span>
+                                  <span class="blue">
+                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                  </span>
                 </a>
               </li>
 
               <li>
                 <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																		<span class="green">
-																			<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																		</span>
+                                  <span class="green">
+                                    <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                  </span>
                 </a>
               </li>
 
               <li>
                 <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																		<span class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																		</span>
+                                  <span class="red">
+                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                  </span>
                 </a>
               </li>
             </ul>
@@ -323,12 +674,127 @@
       </td>
     </tr>
 
+    <tr class="detail-row">
+      <td colspan="8">
+        <div class="table-detail">
+          <div class="row">
+            <div class="col-xs-12 col-sm-2">
+              <div class="text-center">
+                <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
+                <br />
+                <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+                  <div class="inline position-relative">
+                    <a class="user-title-label" href="#">
+                      <i class="ace-icon fa fa-circle light-green"></i>
+                      &nbsp;
+                      <span class="white">Alex M. Doe</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7">
+              <div class="space visible-xs"></div>
+
+              <div class="profile-user-info profile-user-info-striped">
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Username </div>
+
+                  <div class="profile-info-value">
+                    <span>alexdoe</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Location </div>
+
+                  <div class="profile-info-value">
+                    <i class="fa fa-map-marker light-orange bigger-110"></i>
+                    <span>Netherlands, Amsterdam</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Age </div>
+
+                  <div class="profile-info-value">
+                    <span>38</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Joined </div>
+
+                  <div class="profile-info-value">
+                    <span>2010/06/20</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Last Online </div>
+
+                  <div class="profile-info-value">
+                    <span>3 hours ago</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> About Me </div>
+
+                  <div class="profile-info-value">
+                    <span>Bio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3">
+              <div class="space visible-xs"></div>
+              <h4 class="header blue lighter less-margin">Send a message to Alex</h4>
+
+              <div class="space-6"></div>
+
+              <form>
+                <fieldset>
+                  <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
+                </fieldset>
+
+                <div class="hr hr-dotted"></div>
+
+                <div class="clearfix">
+                  <label class="pull-left">
+                    <input type="checkbox" class="ace" />
+                    <span class="lbl"> Email me a copy</span>
+                  </label>
+
+                  <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
+                    Submit
+                    <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+
     <tr>
       <td class="center">
-        <label class="position-relative">
-          <input type="checkbox" class="ace"/>
+        <label class="pos-rel">
+          <input type="checkbox" class="ace" />
           <span class="lbl"></span>
         </label>
+      </td>
+
+      <td class="center">
+        <div class="action-buttons">
+          <a href="#" class="green bigger-140 show-details-btn" title="Show Details">
+            <i class="ace-icon fa fa-angle-double-down"></i>
+            <span class="sr-only">Details</span>
+          </a>
+        </div>
       </td>
 
       <td>
@@ -362,37 +828,142 @@
         </div>
 
         <div class="hidden-md hidden-lg">
-          <div class="inline position-relative">
+          <div class="inline pos-rel">
             <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
               <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
             </button>
 
-            <ul
-              class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
               <li>
                 <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																		<span class="blue">
-																			<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																		</span>
+                                  <span class="blue">
+                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                  </span>
                 </a>
               </li>
 
               <li>
                 <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																		<span class="green">
-																			<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																		</span>
+                                  <span class="green">
+                                    <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                  </span>
                 </a>
               </li>
 
               <li>
                 <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																		<span class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																		</span>
+                                  <span class="red">
+                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                  </span>
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="detail-row">
+      <td colspan="8">
+        <div class="table-detail">
+          <div class="row">
+            <div class="col-xs-12 col-sm-2">
+              <div class="text-center">
+                <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
+                <br />
+                <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+                  <div class="inline position-relative">
+                    <a class="user-title-label" href="#">
+                      <i class="ace-icon fa fa-circle light-green"></i>
+                      &nbsp;
+                      <span class="white">Alex M. Doe</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7">
+              <div class="space visible-xs"></div>
+
+              <div class="profile-user-info profile-user-info-striped">
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Username </div>
+
+                  <div class="profile-info-value">
+                    <span>alexdoe</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Location </div>
+
+                  <div class="profile-info-value">
+                    <i class="fa fa-map-marker light-orange bigger-110"></i>
+                    <span>Netherlands, Amsterdam</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Age </div>
+
+                  <div class="profile-info-value">
+                    <span>38</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Joined </div>
+
+                  <div class="profile-info-value">
+                    <span>2010/06/20</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> Last Online </div>
+
+                  <div class="profile-info-value">
+                    <span>3 hours ago</span>
+                  </div>
+                </div>
+
+                <div class="profile-info-row">
+                  <div class="profile-info-name"> About Me </div>
+
+                  <div class="profile-info-value">
+                    <span>Bio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3">
+              <div class="space visible-xs"></div>
+              <h4 class="header blue lighter less-margin">Send a message to Alex</h4>
+
+              <div class="space-6"></div>
+
+              <form>
+                <fieldset>
+                  <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
+                </fieldset>
+
+                <div class="hr hr-dotted"></div>
+
+                <div class="clearfix">
+                  <label class="pull-left">
+                    <input type="checkbox" class="ace" />
+                    <span class="lbl"> Email me a copy</span>
+                  </label>
+
+                  <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
+                    Submit
+                    <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </td>
@@ -401,3 +972,13 @@
   </table>
 </template>
 
+<script>
+  export default {
+    name: "chapter",
+    mounted: function() {
+      this.$parent.activeSidebar("business-chapter-sidebar");
+    },
+    methods: {
+    }
+  }
+</script>
