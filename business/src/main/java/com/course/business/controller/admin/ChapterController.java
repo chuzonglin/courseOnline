@@ -9,13 +9,13 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/admin/chapter")
 public class ChapterController {
 
     @Resource
     private ChapterMapper chapterMapper;
 
-    @RequestMapping("/chapter")
+    @RequestMapping("/list")
     public List<Chapter> chapter(){
         return (List<Chapter>) chapterMapper.selectByExample(null);
     }
