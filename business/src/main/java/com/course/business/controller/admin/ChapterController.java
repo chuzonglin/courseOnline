@@ -1,4 +1,4 @@
-package com.course.business.controller;
+package com.course.business.controller.admin;
 
 import com.course.server.domain.Chapter;
 import com.course.server.mapper.ChapterMapper;
@@ -9,6 +9,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
+@RequestMapping("/admin")
 public class ChapterController {
 
     @Resource
