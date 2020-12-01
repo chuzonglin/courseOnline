@@ -1,7 +1,9 @@
 package com.course.business.controller.admin;
 
 import com.course.server.domain.Chapter;
+import com.course.server.dto.ChapterDto;
 import com.course.server.mapper.ChapterMapper;
+import com.course.server.service.ChapterService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,10 +15,10 @@ import java.util.List;
 public class ChapterController {
 
     @Resource
-    private ChapterMapper chapterMapper;
+    private ChapterService chapterService;
 
     @RequestMapping("/list")
-    public List<Chapter> chapter(){
-        return (List<Chapter>) chapterMapper.selectByExample(null);
+    public List<ChapterDto> chapter(){
+        return (List<ChapterDto>) chapterService.list();
     }
 }
